@@ -1,0 +1,1596 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Asraful_Islam</title>
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo-3.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/Asraful_Islam.png" alt="Asraful Islam" width="80">
+          <span class="status online"></span>
+        </figure>
+
+
+
+
+        <div class="info-content">
+          <!-- ✅ ID যোগ করা হয়েছে -->
+          <h1 class="name" id="name" title="Asraful Islam"></h1>
+          <p class="title" id="title" ></p>
+        </div>
+    
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+    
+      </div>
+    
+
+      <!-- ✅ JavaScript কোড -->
+      <script>
+        // টেক্সট ভেরিয়েবল
+        const nameText = "Asraful Islam";  // "Asraful Islam" এর মধ্যে স্পেস থাকবে
+        const titleText = "Django Web Developer";  // "Web Developer" এর মধ্যে স্পেস থাকবে
+      
+        // রঙের অ্যারে
+        const colors = ["#FFD700", "#FF6347", "#32CD32", "#f1f1f1", "#800080"]; // হলুদ, লাল, সবুজ, কালো, বেগুনি
+      
+        let i = 0, j = 0;
+        const nameSpeed = 100;
+        const titleSpeed = 80;
+        const restartDelay = 2000;  // লুপ পুনরায় শুরু হওয়ার আগে বিলম্ব (২ সেকেন্ড)
+      
+        function typeName() {
+          if (i < nameText.length) {
+            let colorIndex = Math.floor(i / (nameText.length / colors.length)) % colors.length;
+            if (nameText.charAt(i) === ' ') {
+              document.getElementById("name").innerHTML += `<span style="color:${colors[colorIndex]}">&nbsp;</span>`;
+            } else {
+              document.getElementById("name").innerHTML += `<span style="color:${colors[colorIndex]}">${nameText.charAt(i)}</span>`;
+            }
+            i++;
+            setTimeout(typeName, nameSpeed);
+          } else {
+            setTimeout(typeTitle, 300);
+          }
+        }
+      
+        function typeTitle() {
+          if (j < titleText.length) {
+            let colorIndex = Math.floor(j / (titleText.length / colors.length)) % colors.length;
+            if (titleText.charAt(j) === ' ') {
+              document.getElementById("title").innerHTML += `<span style="color:${colors[colorIndex]}">&nbsp;</span>`;
+            } else {
+              document.getElementById("title").innerHTML += `<span style="color:${colors[colorIndex]}">${titleText.charAt(j)}</span>`;
+            }
+            j++;
+            setTimeout(typeTitle, titleSpeed);
+          } else {
+            setTimeout(resetTyping, restartDelay);
+          }
+        }
+      
+        function resetTyping() {
+          i = 0;
+          j = 0;
+          document.getElementById("name").innerHTML = "";
+          document.getElementById("title").innerHTML = "";
+          setTimeout(typeName, 500);
+        }
+      
+        // টাইপিং ইফেক্ট শুরু করা
+        typeName();
+      </script>
+
+
+
+
+
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:asrafulislam888zfa@gmail.com" class="contact-link">asrafulislam888zfa@gmail.com</a>
+
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <a href="tel:+888 01902181803" class="contact-link">+888 01902181803</a>
+            </div>
+
+          </li>
+
+          <!-- <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Birthday</p>
+
+              <time datetime="1982-06-23">June 23, 1982</time>
+            </div>
+
+          </li> -->
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address> Khulna, Bangladesh </address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <!-- Gmail -->
+          <li class="social-item">
+            <a href="mailto:asrafulislam888zfa@gmail.com" class="social-link" target="_blank">
+              <ion-icon name="mail"></ion-icon>
+            </a>
+          </li>
+
+          <!-- Facebook -->
+          <li class="social-item">
+            <a href="https://www.facebook.com/share/1B93XMG3uo/" class="social-link" target="_blank">
+              <ion-icon name="logo-facebook"></ion-icon>
+            </a>
+          </li>
+
+          <!-- LinkedIn -->
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/asraful-islam-haoladar-32048130b/" class="social-link" target="_blank">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <!-- YouTube -->
+          <li class="social-item">
+            <a href="https://www.youtube.com/@asraful_islam_888" class="social-link" target="_blank">
+              <ion-icon name="logo-youtube"></ion-icon>
+            </a>
+          </li>
+
+          <!-- Twitter -->
+          <li class="social-item">
+            <a href="https://www.twitter.com" class="social-link" target="_blank">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+          </li>
+
+          <!-- Instagram -->
+          <li class="social-item">
+            <a href="https://www.instagram.com" class="social-link" target="_blank">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <!-- GitHub -->
+          <li class="social-item">
+            <a href="https://github.com/AsrAfulPY" class="social-link" target="_blank">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <!-- Website -->
+          <li class="social-item">
+            <a href="https://www.example.com" class="social-link" target="_blank">
+              <ion-icon name="globe"></ion-icon>
+            </a>
+          </li>
+
+          <!-- WhatsApp -->
+          <li class="social-item">
+            <a href="https://wa.me/qr/QPXS7RTB5WYSL1" class="social-link" target="_blank">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+            </a>
+          </li>
+
+          <!-- IMO -->
+          <li class="social-item">
+            <a href="https://imo.im" class="social-link" target="_blank">
+              <ion-icon name="chatbubbles"></ion-icon>
+            </a>
+          </li>
+
+
+          <!-- Phone Contact -->
+          <!-- <li class="social-item">
+            <a href="tel:+880190211803" class="social-link">
+              <ion-icon name="call"></ion-icon>
+            </a>
+          </li> -->
+
+
+
+
+
+        </ul>
+
+      </div>
+
+
+      <style>
+        .sidebar-info_more {
+          max-height: 200px;
+          overflow-y: auto;
+        }
+      </style>
+      
+
+    </aside>
+
+
+
+
+
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <button class="navbar-link  active" data-nav-link>About</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Resume</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Portfolio</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Blog</button>
+          </li>
+
+          <li class="navbar-item">
+            <button class="navbar-link" data-nav-link>Contact</button>
+          </li>
+
+        </ul>
+
+      </nav>
+
+
+
+
+
+      <!--
+        - #ABOUT
+      -->
+
+      
+
+
+      <!-- About Me Section -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About me</h2>
+        </header>
+      
+        <section class="about-text">
+          <p>
+            I'm Asraful Islam, a skilled Django web developer with a passion for building innovative and user-friendly websites.
+            I specialize in creating custom web solutions for various industries including e-commerce, blogs, and fashion. 
+            With experience in Django, Python, and modern web technologies, I ensure your website not only meets your needs but also provides a seamless user experience.
+          </p>
+        
+          <p>
+            My goal is to help businesses grow by building websites that are functional, scalable, and visually appealing. 
+            Whether you're looking to launch an online store, a blog, or a portfolio, I bring your vision to life through thoughtful design and robust development.
+          </p>
+        
+          <p>
+            I believe in providing a personal touch to every project, ensuring that your brand’s identity shines through and resonates with your target audience.
+            Let's collaborate to build something amazing that elevates your business online!
+          </p>
+        </section>
+
+
+
+
+
+
+        <!--
+          - service
+        -->
+
+        <section class="service">
+        
+          <h3 class="h3 service-title">What I'm Doing</h3>
+        
+          <ul class="service-list">
+          
+            <li class="service-item">
+            
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-design.svg" alt="design icon" width="40">
+              </div>
+            
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Design</h4>
+              
+                <p class="service-item-text">
+                  I don't just build websites; I create stunning, modern, and user-friendly designs that speak to your brand's personality.
+                  Whether you’re looking for a clean blog, a high-end fashion site, or an engaging e-commerce store, I ensure your website is visually appealing and user-centric, all while optimizing for performance.
+                </p>
+              </div>
+            
+            </li>
+          
+            <li class="service-item">
+            
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+              </div>
+            
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Web Development</h4>
+              
+                <p class="service-item-text">
+                  As a Django expert, I build websites that are robust, scalable, and secure. From backend architecture to seamless front-end experiences, I ensure your website performs at its best, and evolves as your business grows. 
+                  My web development services are tailored to meet your unique business goals.
+                </p>
+              </div>
+            
+            </li>
+          
+            <!-- <li class="service-item">
+            
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-app.svg" alt="mobile app icon" width="40">
+              </div>
+            
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Mobile Apps</h4>
+              
+                <p class="service-item-text">
+                  I bring your business to the mobile world with professional iOS and Android applications. 
+                  Whether you’re launching an app for your e-commerce store or a custom solution for your unique needs, I ensure your app is seamless, responsive, and user-friendly.
+                </p>
+              </div>
+            
+            </li> -->
+          
+            <li class="service-item">
+            
+              <div class="service-icon-box">
+                <img src="./assets/images/icon-photo.svg" alt="camera icon" width="40">
+              </div>
+            
+              <div class="service-content-box">
+                <h4 class="h4 service-item-title">Photography</h4>
+              
+                <p class="service-item-text">
+                  High-quality visuals are key to a strong online presence. I offer professional photography services to capture your brand, products, or events. Whether it's product shots for your e-commerce site or lifestyle photos for a fashion blog, I create images that connect with your audience.
+                </p>
+              </div>
+            
+            </li>
+          
+          </ul>
+        
+        </section>
+
+
+        
+
+
+
+
+
+
+
+
+
+        <!--
+          - testimonials
+        -->
+
+        <section class="testimonials">
+        
+          <h3 class="h3 testimonials-title">Client Success Stories</h3>
+        
+          <ul class="testimonials-list has-scrollbar">
+          
+            <!-- Testimonial 1 -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+              
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Daniel_Lewis.png" alt="Daniel lewis" width="60" data-testimonials-avatar>
+                </figure>
+              
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Daniel Lewis</h4>
+              
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    "I was looking for a reliable and innovative solution for my business website, and Asraful delivered
+                    just that. The web design was flawless and optimized for the best user experience. We received more
+                    customer engagement than ever before. The integration of secure payment gateways and easy checkout
+                    made a huge difference in our conversion rates. Highly recommend!"
+                  </p>
+                </div>
+              
+              </div>
+            </li>
+          
+            <!-- Testimonial 2 -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+              
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Jessica_Miller.png" alt="Jessica miller" width="60" data-testimonials-avatar>
+                </figure>
+              
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Jessica Miller</h4>
+              
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    "Asraful's work exceeded our expectations! His expertise in Django and web development helped us
+                    create an intuitive platform for our clients. The website’s responsiveness across devices and smooth
+                    user authentication were standout features. Our traffic has increased dramatically."
+                  </p>
+                </div>
+              
+              </div>
+            </li>
+          
+            <!-- Testimonial 3 -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+              
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Emily_Evans.png" alt="Emily evans" width="60" data-testimonials-avatar>
+                </figure>
+              
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Emily Evans</h4>
+              
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    "Working with Asraful was a game-changer for our dental clinic. His expertise in designing and
+                    developing the perfect website has allowed our patients to easily book appointments and read reviews.
+                    The site is user-friendly, and the back-end is secure and efficient."
+                  </p>
+                </div>
+              
+              </div>
+            </li>
+          
+            <!-- Testimonial 4 -->
+            <li class="testimonials-item">
+              <div class="content-card" data-testimonials-item>
+              
+                <figure class="testimonials-avatar-box">
+                  <img src="./assets/images/Henry_William.png" alt="Henry william" width="60" data-testimonials-avatar>
+                </figure>
+              
+                <h4 class="h4 testimonials-item-title" data-testimonials-title>Henry William</h4>
+              
+                <div class="testimonials-text" data-testimonials-text>
+                  <p>
+                    "I hired Asraful for an e-commerce solution, and the results were amazing. His skills with WooCommerce
+                    and Shopify integration provided us with a seamless and secure online store. We saw a significant rise
+                    in sales after the redesign."
+                  </p>
+                </div>
+              
+              </div>
+            </li>
+          
+          </ul>
+        
+        </section>
+
+
+
+
+
+
+
+
+
+
+        <!--
+          - testimonials modal
+        -->
+
+
+        <!-- Testimonials Modal Section -->
+        <div class="modal-container" data-modal-container>
+        
+          <div class="overlay" data-overlay></div>
+        
+          <section class="testimonials-modal">
+          
+            <button class="modal-close-btn" data-modal-close-btn>
+              <ion-icon name="close-outline"></ion-icon>
+            </button>
+          
+            <div class="modal-img-wrapper">
+              <figure class="modal-avatar-box">
+                <img src="./assets/images/Daniel_Lewis.png" alt="Daniel lewis" width="80" data-modal-img>
+              </figure>
+            
+              <img src="./assets/images/icon-quote.svg" alt="quote icon">
+            </div>
+          
+            <div class="modal-content">
+            
+              <h4 class="h3 modal-title" data-modal-title>Daniel lewis</h4>
+            
+              <time datetime="2021-06-14">14 June, 2021</time>
+            
+              <div data-modal-text>
+                <p>
+                  "I had the pleasure of working with Asraful Islam, and I am beyond satisfied with his work. His expertise in Django framework and web development is exceptional. 
+                  Particularly, the e-commerce solution he delivered was incredibly user-friendly and secure. 
+                  I am impressed by his design and development approach, and I look forward to working with him again in the future."
+                </p>
+              </div>
+            
+            </div>
+          
+          </section>
+        
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--
+          - clients
+        -->
+
+        <!-- <section class="clients">
+
+          <h3 class="h3 clients-title">Clients</h3>
+
+          <ul class="clients-list has-scrollbar">
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-1-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-2-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-3-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-4-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-5-color.png" alt="client logo">
+              </a>
+            </li>
+
+            <li class="clients-item">
+              <a href="#">
+                <img src="./assets/images/logo-6-color.png" alt="client logo">
+              </a>
+            </li>
+
+          </ul>
+
+        </section> -->
+
+
+
+
+
+
+
+
+
+      </article>
+
+
+
+
+
+      <!--
+        - #RESUME
+      -->
+
+      <!-- <article class="resume" data-page="resume">
+
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Education</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">University school of the arts</h4>
+
+              <span>2007 — 2008</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">New york academy of art</h4>
+
+              <span>2006 — 2007</span>
+
+              <p class="timeline-text">
+                Ratione voluptatem sequi nesciunt, facere quisquams facere menda ossimus, omnis voluptas assumenda est
+                omnis..
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">High school of art and design</h4>
+
+              <span>2002 — 2004</span>
+
+              <p class="timeline-text">
+                Duis aute irure dolor in reprehenderit in voluptate, quila voluptas mag odit aut fugit, sed consequuntur
+                magni dolores
+                eos.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Experience</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Creative director</h4>
+
+              <span>2015 — Present</span>
+
+              <p class="timeline-text">
+                Nemo enim ipsam voluptatem blanditiis praesentium voluptum delenit atque corrupti, quos dolores et qvuas
+                molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Art director</h4>
+
+              <span>2013 — 2015</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Web designer</h4>
+
+              <span>2010 — 2013</span>
+
+              <p class="timeline-text">
+                Nemo enims ipsam voluptatem, blanditiis praesentium voluptum delenit atque corrupti, quos dolores et
+                quas molestias
+                exceptur.
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <section class="skill">
+
+          <h3 class="h3 skills-title">My skills</h3>
+
+          <ul class="skills-list content-card">
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Web design</h5>
+                <data value="80">80%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Graphic design</h5>
+                <data value="70">70%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 70%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">Branding</h5>
+                <data value="90">90%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+
+            </li>
+
+            <li class="skills-item">
+
+              <div class="title-wrapper">
+                <h5 class="h5">WordPress</h5>
+                <data value="50">50%</data>
+              </div>
+
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 50%;"></div>
+              </div>
+
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article> -->
+
+
+
+
+
+
+
+      
+
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">My Resume</h2>
+        </header>
+      
+        <!-- Introduction Section -->
+        <section class="intro">
+          <h3 class="h3">Introduction</h3>
+          <p style="color: blue;">
+            I am Asraful Islam, a skilled Django web developer. I create various types of websites such as blogs, e-commerce, fashion sites, and more. I use Django and other modern web technologies to build user-friendly and scalable web applications.
+          </p>
+        </section>
+      
+        <!-- Skills Section -->
+        <section class="skills">
+          <h3 class="h3 skills-title">My Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Backend Development</h5>
+                <data value="90" style="color: green;">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Frontend Development</h5>
+                <data value="75" style="color: green;">75%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 75%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Database Management</h5>
+                <data value="80" style="color: green;">80%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 80%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">API Development</h5>
+                <data value="85" style="color: green;">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      
+        <!-- Services Section -->
+        <section class="services">
+          <h3 class="h3 services-title">My Services</h3>
+          <ul class="services-list">
+            <li class="service-item">
+              <h4 class="h4">Web Design and Development</h4>
+              <p style="color: blue;">Exceptional and user-oriented web design and development according to client needs.</p>
+            </li>
+            <li class="service-item">
+              <h4 class="h4">E-Commerce Solutions</h4>
+              <p style="color: blue;">Secure payment gateways, product catalog, and integrated checkout systems.</p>
+            </li>
+            <li class="service-item">
+              <h4 class="h4">User Authentication and Security</h4>
+              <p style="color: blue;">Ensuring security for web applications and databases.</p>
+            </li>
+          </ul>
+        </section>
+      
+        <!-- Projects Section -->
+        <section class="projects">
+          <h3 class="h3 projects-title">My Projects</h3>
+          <ul class="projects-list">
+            <li class="project-item">
+              <h4 class="h4">Dental Clinic Website</h4>
+              <p style="color: blue;">I designed and developed a complete dental website with doctor profiles, patient reviews, and an online appointment system.</p>
+            </li>
+            <li class="project-item">
+              <h4 class="h4">E-Commerce Site (Fashion)</h4>
+              <p style="color: blue;">I created a fashion shop website with an enhanced user interface and payment integration.</p>
+            </li>
+            <li class="project-item">
+              <h4 class="h4">Blog Website</h4>
+              <p style="color: blue;">I developed a website for bloggers, allowing them to easily write, edit, and share posts.</p>
+            </li>
+          </ul>
+        </section>
+      
+        <!-- Future Goals Section -->
+        <section class="goals">
+          <h3 class="h3 goals-title">My Future Goals</h3>
+          <p style="color: blue;">
+            My goal is to build more scalable and interactive websites that are accessible from anywhere in the world. I enjoy working with new technologies and tools and aim to continuously improve my skills in this field.
+          </p>
+        </section>
+      </article>
+      
+
+
+
+
+
+
+
+
+
+
+      
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio" data-page="portfolio">
+
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web design</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Applications</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Web development</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web design</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Applications</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Web development</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project_ecom.jpg" alt="E-commerce" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">E-commerce</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/portfolio.png" alt="portfolio" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Portfolio</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/Dentist.png" alt="Dentist" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Dentist</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+
+
+
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/restaurant.png" alt="restaurant" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Restaurant</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="fundo" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Fundo</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="dsm." loading="lazy">
+                </figure>
+
+                <h3 class="project-title">DSM.</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web design">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="metaspark" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">MetaSpark</h3>
+
+                <p class="project-category">Web design</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="summary" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Summary</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="applications">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="task manager" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Task Manager</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+            <li class="project-item  active" data-filter-item data-category="web development">
+              <a href="#">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="arrival" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Arrival</h3>
+
+                <p class="project-category">Web development</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+
+
+
+
+      <!--
+        - #BLOG
+      -->
+
+      <!-- BLOG SECTION -->
+      <article class="blog" data-page="blog">
+      
+        <header>
+          <h2 class="h2 article-title">Blog</h2>
+        </header>
+      
+        <section class="blog-posts">
+          <ul class="blog-posts-list">
+          
+
+
+
+            <!-- Post 6: Service Promotion -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Services.png" alt="Get Your Website Today" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Services</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-02-20">Feb 20, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Need a website for your business? </h3>
+                  <p class="blog-text">
+                    I can build you a professional website, contact me today!
+                  </p>
+                </div>
+              </a>
+            </li>
+
+
+
+
+
+
+            <!-- Post 2: Technology Insight -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Technology.png" alt="Django REST API Tips" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Technology</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-15">Mar 15, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Simplify API development with the Django REST Framework</h3>
+                  <p class="blog-text">
+                    Don't miss this guide if you want to build a fast and secure API.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+
+
+
+
+
+
+            <!-- Portfolio Website Post -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/portfolio.png" alt="Portfolio Website Project" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Portfolio Website</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-22">Mar 22, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">The Perfect Portfolio Website to Showcase Your Skills and Projects</h3>
+                  <p class="blog-text">
+                    Here’s the story of how I created a professional portfolio website that caught the attention of clients!
+                  </p>
+                </div>
+              </a>
+            </li>
+          
+            <!-- Blog Website Post -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/blog.png" alt="Blog Website Project" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Blog Website</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-20">Mar 20, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Perfect Blog Website Design for Bloggers</h3>
+                  <p class="blog-text">
+                    I created a blog website with easy navigation, a responsive design, and SEO-friendly features that improved the reader's experience.
+                  </p>
+                </div>
+              </a>
+            </li>
+          
+            <!-- Restaurant Website Post -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/restaurant.png" alt="Restaurant Website Project" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Restaurant Website</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-18">Mar 18, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Build Your Restaurant's Online Presence with an Attractive Website</h3>
+                  <p class="blog-text">
+                    I created a restaurant website featuring menu display, online booking, and a customer review system.
+                  </p>
+                </div>
+              </a>
+            </li>
+          
+            <!-- E-commerce Website Post -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/project_ecom.jpg" alt="E-commerce Website Project" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">E-commerce Website</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-15">Mar 15, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">E-commerce Website for Your Business: A Tool to Boost Sales</h3>
+                  <p class="blog-text">
+                    I designed an e-commerce website with product listings, secure payments, and a user-friendly interface that increased sales.
+                  </p>
+                </div>
+              </a>
+            </li>
+          
+            <!-- Video Website Post -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/video.png" alt="Video Streaming Website Project" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Video Website</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-12">Mar 12, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">The Perfect Platform for Video Content: Video Website</h3>
+                  <p class="blog-text">
+                    I created a video website with a custom video player and category and filter options.
+                  </p>
+                </div>
+              </a>
+            </li>
+          
+            <!-- Fashion Website Post -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/fashion.png" alt="Fashion Website Project" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Fashion Website</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-10">Mar 10, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Attractive Website Design for Fashion Brands</h3>
+                  <p class="blog-text">
+                    I created a website for a fashion brand with trendy designs and e-commerce features that enhanced their brand value.
+                  </p>
+                </div>
+              </a>
+            </li>
+          
+
+
+
+
+
+            <!-- Post 1: Project Showcase -->
+            <li class="blog-post-item">
+              <a href="#">
+                <figure class="blog-banner-box">
+                  <img src="./assets/images/Dentist.png" alt="Django Dental Clinic Project" loading="lazy">
+                </figure>
+                <div class="blog-content">
+                  <div class="blog-meta">
+                    <p class="blog-category">Project Showcase</p>
+                    <span class="dot"></span>
+                    <time datetime="2025-03-22">Mar 22, 2025</time>
+                  </div>
+                  <h3 class="h3 blog-item-title">Dental Clinic Website: An Easy Solution for Patients</h3>
+                  <p class="blog-text">
+                    Learn in this blog how I created a complete booking system for a dental clinic.
+                  </p>
+                </div>
+              </a>
+            </li>
+
+
+
+
+
+
+
+          </ul>
+        </section>
+      
+      </article>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <!--
+        - #CONTACT
+      -->
+
+      <article class="contact" data-page="contact">
+
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+
+
+
+          <section class="dento-contact-area mt-50 mb-100">
+            <div class="container">
+              <div class="row">
+                <div class="col-12">
+                  <div class="google-maps mb-100">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d2458.6737875220265!2d89.38786979510985!3d22.60464094455018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e1!3m2!1sen!2sbd!4v1742750968685!5m2!1sen!2sbd"
+                    allowfullscreen></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+
+
+
+
+          <h3 class="h3 form-title">Contact Form</h3>
+
+          <form action="#" class="form" data-form>
+
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+
+          </form>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+
+
+
+
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
